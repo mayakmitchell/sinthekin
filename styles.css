@@ -275,6 +275,10 @@ p {
     padding: 110px clamp(24px, 7vw, 104px);
 }
 
+.home-intro-band {
+    animation: faqFadeDown 900ms ease both;
+}
+
 .intro-band h2 {
     color: var(--black);
     font-size: clamp(30px, 3.8vw, 54px);
@@ -321,6 +325,15 @@ p {
 
 .section.alt {
     background: var(--paper);
+}
+
+.home-preview-section .section-header {
+    animation: faqFadeDown 900ms ease both;
+}
+
+.home-preview-section .product-grid {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 160ms;
 }
 
 .section-header,
@@ -612,7 +625,10 @@ details {
     .contact-page-header,
     .contact-form,
     .shop-page-header,
-    .shop-grid-section .product-grid {
+    .shop-grid-section .product-grid,
+    .home-intro-band,
+    .home-preview-section .section-header,
+    .home-preview-section .product-grid {
         animation: none;
     }
 }
