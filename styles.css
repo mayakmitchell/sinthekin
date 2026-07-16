@@ -510,7 +510,10 @@ p {
 
 .info-list {
     border-top: 1px solid var(--line);
-    max-width: 920px;
+    margin-left: clamp(24px, 6vw, 96px);
+    margin-right: clamp(16px, 3vw, 40px);
+    max-width: 1100px;
+    width: calc(100% - clamp(24px, 6vw, 96px) - clamp(16px, 3vw, 40px));
 }
 
 details {
@@ -547,7 +550,7 @@ details p {
 }
 
 .faq-content {
-    margin-top: 22px;
+    margin-top: 28px;
     max-width: 980px;
 }
 
@@ -560,7 +563,7 @@ details p {
     font-size: 15px;
     font-weight: 600;
     line-height: 1.35;
-    margin: 24px 0 8px;
+    margin: 24px 0 10px;
 }
 
 .info-list .faq-prose h3:first-child {
@@ -570,14 +573,22 @@ details p {
 .info-list .faq-prose p {
     color: var(--black);
     font-size: 14px;
-    line-height: 1.45;
-    margin: 0 0 16px;
-    max-width: 980px;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    max-width: 1000px;
 }
 
 .info-list .faq-prose strong {
     color: var(--black);
     font-weight: 700;
+}
+
+.faq-section-break {
+    margin: 38px 0;
+}
+
+.faq-section-break:last-child {
+    margin-bottom: 0;
 }
 
 .contact-panel {
