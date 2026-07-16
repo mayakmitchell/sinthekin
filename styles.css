@@ -548,32 +548,39 @@ details p {
 
 .faq-content {
     display: grid;
-    gap: 22px;
-    margin-top: 22px;
-    max-width: 760px;
+    gap: 14px;
+    margin-top: 18px;
+    max-width: 680px;
 }
 
-.faq-content p {
+.info-list .faq-content p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
     margin-top: 0;
+    max-width: 680px;
 }
 
 .faq-block {
     border-top: 1px solid var(--line);
-    padding-top: 18px;
+    display: grid;
+    gap: 8px;
+    padding-top: 14px;
 }
 
-.faq-block h3 {
-    font-size: 14px;
+.info-list .faq-block h3 {
+    font-size: 13px;
     font-weight: 500;
-    line-height: 1.35;
-    margin-bottom: 10px;
+    line-height: 1.3;
+    margin-bottom: 0;
 }
 
-.faq-price {
+.info-list .faq-content .faq-price {
     color: var(--black);
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
