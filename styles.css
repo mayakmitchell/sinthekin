@@ -276,7 +276,7 @@ p {
 }
 
 .home-intro-band {
-    animation: faqFadeDown 900ms ease both;
+    transition: opacity 900ms ease, transform 900ms ease;
 }
 
 .intro-band h2 {
@@ -328,12 +328,25 @@ p {
 }
 
 .home-preview-section .section-header {
-    animation: faqFadeDown 900ms ease both;
+    transition: opacity 900ms ease, transform 900ms ease;
 }
 
 .home-preview-section .product-grid {
-    animation: faqFadeDown 900ms ease both;
-    animation-delay: 160ms;
+    transition: opacity 900ms ease 160ms, transform 900ms ease 160ms;
+}
+
+.js .home-intro-band,
+.js .home-preview-section .section-header,
+.js .home-preview-section .product-grid {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+
+.js .home-intro-band.is-visible,
+.js .home-preview-section .section-header.is-visible,
+.js .home-preview-section .product-grid.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-header,
@@ -630,6 +643,19 @@ details {
     .home-preview-section .section-header,
     .home-preview-section .product-grid {
         animation: none;
+    }
+
+    .home-intro-band,
+    .home-preview-section .section-header,
+    .home-preview-section .product-grid {
+        transition: none;
+    }
+
+    .js .home-intro-band,
+    .js .home-preview-section .section-header,
+    .js .home-preview-section .product-grid {
+        opacity: 1;
+        transform: none;
     }
 }
 
