@@ -546,6 +546,37 @@ details p {
     max-width: 690px;
 }
 
+.faq-content {
+    display: grid;
+    gap: 22px;
+    margin-top: 22px;
+    max-width: 760px;
+}
+
+.faq-content p {
+    margin-top: 0;
+}
+
+.faq-block {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+}
+
+.faq-block h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.faq-price {
+    color: var(--black);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
 .contact-panel {
     border: 1px solid var(--line);
     display: grid;
