@@ -487,6 +487,16 @@ p {
     padding-top: 44px;
 }
 
+.contact-page-header {
+    animation: faqFadeDown 900ms ease both;
+}
+
+.contact-section .contact-panel {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 160ms;
+    grid-template-columns: 1fr;
+}
+
 .statement-layout {
     display: grid;
     gap: 54px;
@@ -573,7 +583,9 @@ details {
     .info-list details,
     .meet-page-header,
     .meet-statement-section .statement-layout img,
-    .meet-statement-section .statement-text {
+    .meet-statement-section .statement-text,
+    .contact-page-header,
+    .contact-section .contact-panel {
         animation: none;
     }
 }
