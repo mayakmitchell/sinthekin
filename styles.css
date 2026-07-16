@@ -476,10 +476,26 @@ p {
     padding-left: calc(clamp(22px, 6vw, 86px) + clamp(24px, 6vw, 96px));
 }
 
+.meet-page-header {
+    animation: faqFadeDown 900ms ease both;
+    min-height: 210px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.meet-statement-section {
+    padding-top: 44px;
+}
+
 .statement-layout {
     display: grid;
     gap: 54px;
     grid-template-columns: 0.78fr 1.22fr;
+}
+
+.meet-statement-section .statement-layout img {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 140ms;
 }
 
 .statement-layout img {
@@ -494,6 +510,11 @@ p {
     align-content: center;
     display: grid;
     gap: 26px;
+}
+
+.meet-statement-section .statement-text {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 280ms;
 }
 
 .statement-text .lead {
@@ -549,7 +570,10 @@ details {
 
 @media (prefers-reduced-motion: reduce) {
     .info-page-header,
-    .info-list details {
+    .info-list details,
+    .meet-page-header,
+    .meet-statement-section .statement-layout img,
+    .meet-statement-section .statement-text {
         animation: none;
     }
 }
