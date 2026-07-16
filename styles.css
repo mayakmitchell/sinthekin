@@ -6,6 +6,7 @@
     --muted: #666;
     --soft: #efefeb;
     --header-height: 84px;
+    --inner-page-inset: clamp(24px, 6vw, 96px);
 }
 
 * {
@@ -473,7 +474,7 @@ p {
 
 .info-page-header {
     animation: faqFadeDown 900ms ease both;
-    padding-left: calc(clamp(22px, 6vw, 86px) + clamp(24px, 6vw, 96px));
+    padding-left: calc(clamp(22px, 6vw, 86px) + var(--inner-page-inset));
 }
 
 .meet-page-header {
@@ -481,14 +482,21 @@ p {
     min-height: 210px;
     margin-bottom: 0;
     padding-bottom: 20px;
+    padding-left: calc(clamp(22px, 6vw, 86px) + var(--inner-page-inset));
 }
 
 .meet-statement-section {
     padding-top: 44px;
 }
 
+.meet-statement-section .statement-layout {
+    margin-left: var(--inner-page-inset);
+    width: calc(100% - var(--inner-page-inset));
+}
+
 .contact-page-header {
     animation: faqFadeDown 900ms ease both;
+    padding-left: calc(clamp(22px, 6vw, 86px) + var(--inner-page-inset));
 }
 
 .contact-section {
@@ -500,9 +508,18 @@ p {
     animation-delay: 160ms;
     display: grid;
     gap: 50px;
-    margin-left: clamp(24px, 10vw, 220px);
+    margin-left: var(--inner-page-inset);
     max-width: 920px;
-    width: min(72vw, 920px);
+    width: min(calc(100% - var(--inner-page-inset)), 920px);
+}
+
+.shop-page-header {
+    animation: faqFadeDown 900ms ease both;
+}
+
+.shop-grid-section .product-grid {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 160ms;
 }
 
 .statement-layout {
@@ -593,7 +610,9 @@ details {
     .meet-statement-section .statement-layout img,
     .meet-statement-section .statement-text,
     .contact-page-header,
-    .contact-form {
+    .contact-form,
+    .shop-page-header,
+    .shop-grid-section .product-grid {
         animation: none;
     }
 }
@@ -804,8 +823,8 @@ details p {
     }
 
     .contact-form {
-        margin-left: clamp(24px, 8vw, 80px);
-        width: min(82vw, 920px);
+        margin-left: var(--inner-page-inset);
+        width: min(calc(100% - var(--inner-page-inset)), 920px);
     }
 
     .product-grid,
@@ -844,8 +863,10 @@ details p {
         padding-inline: 18px;
     }
 
-    .info-page-header {
-        padding-left: calc(18px + clamp(24px, 6vw, 96px));
+    .info-page-header,
+    .meet-page-header,
+    .contact-page-header {
+        padding-left: calc(18px + var(--inner-page-inset));
     }
 
     .contact-section {
@@ -854,8 +875,8 @@ details p {
 
     .contact-form {
         gap: 38px;
-        margin-left: 0;
-        width: 100%;
+        margin-left: var(--inner-page-inset);
+        width: calc(100% - var(--inner-page-inset));
     }
 
     .section-header,
