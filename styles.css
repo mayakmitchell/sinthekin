@@ -112,6 +112,7 @@ p {
 }
 
 .hero {
+    animation: faqFadeDown 900ms ease both;
     align-items: center;
     background: var(--black);
     display: flex;
@@ -630,6 +631,7 @@ details {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .hero,
     .info-page-header,
     .info-list details,
     .meet-page-header,
