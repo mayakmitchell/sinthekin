@@ -428,7 +428,18 @@ p {
     grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
 }
 
+.product-page-header {
+    animation: faqFadeDown 900ms ease both;
+}
+
+.product-detail {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 280ms;
+}
+
 .product-detail-image {
+    animation: faqFadeDown 900ms ease both;
+    animation-delay: 140ms;
     background: var(--soft);
     border: 1px solid var(--line);
 }
@@ -523,7 +534,8 @@ p {
 
 .contact-page-header {
     animation: faqFadeDown 900ms ease both;
-    padding-left: calc(clamp(22px, 6vw, 86px) + var(--inner-page-inset));
+    justify-content: center;
+    text-align: center;
 }
 
 .contact-section {
@@ -535,9 +547,9 @@ p {
     animation-delay: 160ms;
     display: grid;
     gap: 50px;
-    margin-left: var(--inner-page-inset);
+    margin-inline: auto;
     max-width: 920px;
-    width: min(calc(100% - var(--inner-page-inset)), 920px);
+    width: min(72vw, 920px);
 }
 
 .shop-page-header {
@@ -639,6 +651,9 @@ details {
     .meet-statement-section .statement-text,
     .contact-page-header,
     .contact-form,
+    .product-page-header,
+    .product-detail-image,
+    .product-detail,
     .shop-page-header,
     .shop-grid-section .product-grid,
     .home-intro-band,
@@ -867,8 +882,8 @@ details p {
     }
 
     .contact-form {
-        margin-left: var(--inner-page-inset);
-        width: min(calc(100% - var(--inner-page-inset)), 920px);
+        margin-inline: auto;
+        width: min(82vw, 920px);
     }
 
     .product-grid,
@@ -908,8 +923,7 @@ details p {
     }
 
     .info-page-header,
-    .meet-page-header,
-    .contact-page-header {
+    .meet-page-header {
         padding-left: calc(18px + var(--inner-page-inset));
     }
 
@@ -919,8 +933,8 @@ details p {
 
     .contact-form {
         gap: 38px;
-        margin-left: var(--inner-page-inset);
-        width: calc(100% - var(--inner-page-inset));
+        margin-inline: auto;
+        width: min(100%, 620px);
     }
 
     .section-header,
