@@ -539,17 +539,17 @@ p {
 }
 
 .contact-section {
-    padding-top: 76px;
+    padding-top: 56px;
 }
 
 .contact-form {
     animation: faqFadeDown 900ms ease both;
     animation-delay: 160ms;
     display: grid;
-    gap: 50px;
+    gap: 38px;
     margin-inline: auto;
-    max-width: 920px;
-    width: min(72vw, 920px);
+    max-width: 760px;
+    width: min(64vw, 760px);
 }
 
 .shop-page-header {
@@ -771,12 +771,12 @@ details p {
 
 .contact-form label {
     display: grid;
-    gap: 18px;
+    gap: 12px;
 }
 
 .contact-form span {
     color: var(--muted);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -788,14 +788,14 @@ details p {
     border-radius: 0;
     color: var(--black);
     font: inherit;
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
-    padding: 0 0 12px;
+    padding: 0 0 9px;
     width: 100%;
 }
 
 .contact-form textarea {
-    min-height: 136px;
+    min-height: 104px;
     resize: vertical;
 }
 
@@ -811,10 +811,10 @@ details p {
     color: var(--black);
     cursor: pointer;
     font: inherit;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
-    letter-spacing: 0.18em;
-    padding: 13px 18px;
+    letter-spacing: 0.16em;
+    padding: 10px 14px;
     text-transform: uppercase;
 }
 
@@ -928,13 +928,13 @@ details p {
     }
 
     .contact-section {
-        padding-top: 42px;
+        padding-top: 34px;
     }
 
     .contact-form {
-        gap: 38px;
+        gap: 30px;
         margin-inline: auto;
-        width: min(100%, 620px);
+        width: min(100%, 560px);
     }
 
     .section-header,
