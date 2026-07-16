@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=contact-fade-1">
+    <link rel="stylesheet" href="styles.css?v=contact-minimal-1">
 </head>
 
 <body>
@@ -30,16 +30,24 @@
             <div>
                 <h1>Contact</h1>
             </div>
-            <p>For purchases, commissions, press, and availability questions.</p>
         </section>
 
-        <section class="section alt contact-section">
-            <div class="contact-panel">
-                <div class="contact-item">
-                    <p class="small-label">Business email</p>
-                    <a href="mailto:sinthekin@proton.me">sinthekin@proton.me</a>
-                </div>
-            </div>
+        <section class="section contact-section">
+            <form class="contact-form" action="mailto:sinthekin@proton.me" method="post" enctype="text/plain">
+                <label>
+                    <span>Full Name</span>
+                    <input type="text" name="Full Name" autocomplete="name">
+                </label>
+                <label>
+                    <span>Email*</span>
+                    <input type="email" name="Email" autocomplete="email" required>
+                </label>
+                <label>
+                    <span>Message*</span>
+                    <textarea name="Message" rows="5" required></textarea>
+                </label>
+                <button class="contact-submit" type="submit">Send Inquiry</button>
+            </form>
         </section>
     </main>
 

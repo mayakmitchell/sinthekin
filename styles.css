@@ -491,10 +491,18 @@ p {
     animation: faqFadeDown 900ms ease both;
 }
 
-.contact-section .contact-panel {
+.contact-section {
+    padding-top: 76px;
+}
+
+.contact-form {
     animation: faqFadeDown 900ms ease both;
     animation-delay: 160ms;
-    grid-template-columns: 1fr;
+    display: grid;
+    gap: 50px;
+    margin-left: clamp(24px, 10vw, 220px);
+    max-width: 920px;
+    width: min(72vw, 920px);
 }
 
 .statement-layout {
@@ -585,7 +593,7 @@ details {
     .meet-statement-section .statement-layout img,
     .meet-statement-section .statement-text,
     .contact-page-header,
-    .contact-section .contact-panel {
+    .contact-form {
         animation: none;
     }
 }
@@ -683,6 +691,60 @@ details p {
     text-transform: none;
 }
 
+.contact-form label {
+    display: grid;
+    gap: 18px;
+}
+
+.contact-form span {
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+    border-radius: 0;
+    color: var(--black);
+    font: inherit;
+    font-size: 16px;
+    outline: none;
+    padding: 0 0 12px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    min-height: 136px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--black);
+}
+
+.contact-submit {
+    align-self: start;
+    background: transparent;
+    border: 1px solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    padding: 13px 18px;
+    text-transform: uppercase;
+}
+
+.contact-submit:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
 .site-footer {
     border-top: 1px solid var(--line);
     display: grid;
@@ -741,6 +803,11 @@ details p {
         grid-template-columns: 1fr;
     }
 
+    .contact-form {
+        margin-left: clamp(24px, 8vw, 80px);
+        width: min(82vw, 920px);
+    }
+
     .product-grid,
     .product-grid.full {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -779,6 +846,16 @@ details p {
 
     .info-page-header {
         padding-left: calc(18px + clamp(24px, 6vw, 96px));
+    }
+
+    .contact-section {
+        padding-top: 42px;
+    }
+
+    .contact-form {
+        gap: 38px;
+        margin-left: 0;
+        width: 100%;
     }
 
     .section-header,
