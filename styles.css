@@ -471,6 +471,10 @@ p {
     padding: 86px clamp(22px, 6vw, 86px) 34px;
 }
 
+.info-page-header {
+    padding-left: calc(clamp(22px, 6vw, 86px) + clamp(24px, 6vw, 96px));
+}
+
 .statement-layout {
     display: grid;
     gap: 54px;
@@ -516,9 +520,35 @@ p {
     width: calc(100% - clamp(24px, 6vw, 96px) - clamp(16px, 3vw, 40px));
 }
 
+.info-list details {
+    animation: faqFadeDown 620ms ease both;
+}
+
 details {
     border-bottom: 1px solid var(--line);
     padding: 24px 0;
+}
+
+.info-list details:nth-child(2) {
+    animation-delay: 110ms;
+}
+
+@keyframes faqFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .info-list details {
+        animation: none;
+    }
 }
 
 summary {
@@ -706,6 +736,10 @@ details p {
     .intro-band,
     .page-header {
         padding-inline: 18px;
+    }
+
+    .info-page-header {
+        padding-left: calc(18px + clamp(24px, 6vw, 96px));
     }
 
     .section-header,
